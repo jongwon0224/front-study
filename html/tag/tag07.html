@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Label</title>
+</head>
+<body>
+    <input type="email">
+    <br>
+    <!--label 암묵적 vs 명시적 // <label>태그로 감싸기 vs <label for="id값 입력"
+        checked 사용시 해당 값 기본 디폴트값으로 나옴-->
+    <fieldset>
+        <legend>햄버거 추가 메뉴</legend>
+            <label><input type="checkbox">패티 추가</label>    
+            <label><input type="checkbox">치즈 추가</label>
+            <input type="checkbox" id="chb_bacon" checked><label for="chb_bacon">베이컨 추가</label><br>
+    </fieldset>
+
+    <br>
+    
+    <!--disabled 사용시 해당 값 사용 못함-->
+    <fieldset>
+        <legend>족발 사이즈</legend>
+            <label>족발 소<input type="radio" name="level" disabled></label><br>
+            <label>족발 중<input type="radio" name="level"></label><br>
+            <label for="rd_large">족발 대<input type="radio" name="level" id="rd_large"></label><br>
+            <input type="reset">
+    </fieldset>
+    
+    <br>
+    
+    <textarea readonly>다중 텍스트 입력 공간</textarea>
+    
+    <br>
+
+    <!--fieldset 태그 : 주변 박스 생성 // 콤보박스 => select, optgroup, option
+        부모 : select태그, 자 : optgroup, 손자 : option태그-->
+
+    <fieldset>
+        <select>
+            <optgroup label="햄버거">
+                <option>치즈 버거</option>
+                <option>싸이 버거</option>
+                <option>마살라 버거</option>
+                <option>불고기 버거</option>
+            </optgroup>
+            <optgroup label="면류">
+                <option>냉면</option>
+                <option>라면</option>
+                <option>국수</option>
+                <option>짜장면</option>
+            </optgroup>
+        </select>
+        <select size="5" multiple>
+            <optgroup label="햄버거">
+                <option>치즈 버거</option>
+                <option>싸이 버거</option>
+                <option selected>마살라 버거</option>
+                <option>불고기 버거</option>
+            </optgroup>
+            <optgroup label="면류">
+                <option>냉면</option>
+                <option>라면</option>
+                <option>국수</option>
+                <option selected>짜장면</option>
+            </optgroup>
+        </select>
+    </fieldset>
+
+    <br>
+    <!--버튼태그 이미지 삽입-->
+    <input type="button" value="인풋버튼">
+    <button type="button">태그버튼</button>
+
+    <button>
+        <img src="../라면.jpg" alt="라면">
+        라면 이미지 버튼
+    </button>
+
+    <br>
+    <!--maxlength : 글자수 제한 -->
+    <input type="password" maxlength="8">
+
+    <br>
+    <!--placeholder는 해당 상자 힌트 위한 태그-->
+    <input type="text" value="이름 입력">
+    <input type="text" placeholder="이름 입력">
+</body>
+</html>
