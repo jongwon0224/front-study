@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* 그룹 선택자 */
+        p,
+        strong {
+            color: red;
+        }
+
+        /* 자식 선택자 */
+        /* 많이 쓰일듯 */
+        .top-div > p {
+            color: blue;
+        }
+
+        /* 하위(자손) 선택자
+        /* 스페이스만 쓰면됨 */
+        .top-div span {
+            color: green;
+        }
+        */
+
+        /* 인접 형제 선택자
+        p + span {
+            color: orange;
+        }
+        */
+        /* 일반 형제 선택자 */
+        p ~ span {
+            color: orange;
+        }
+
+        /* 가상 요소 선택자 == li, ul, ol 태그랑 비슷*/
+        #vr-p::before {
+            content: '*';
+            color: aqua;
+        }
+
+        #vr-p::after {
+            content: '...';
+            color: gold;
+        }
+
+        /* 가상 클래스 선택자 */
+        /* 많이 쓰일듯 */
+        a:link {
+            color: violet;
+        }
+        a:visited {
+            color: lime;
+            font-size: 30px;
+        }
+        /* 마우스 올리면 빨간색 */
+        /* 많이 쓰일듯*/
+        a:hover {
+            color: red;
+            text-decoration: underline;
+        }
+        /* 마우스 클릭하면 파란색 */
+        a:active {
+            color: blue;
+        }
+        /* 인풋에 포커스 잡히면 css적용 */
+        /* 괜찮은듯 재밌음*/
+        input:focus {
+            color: gray;
+            font-size: 50px;
+        }
+        /* 인풋에 disalbed 걸리면 css적용 */
+        input:disabled {
+            color: darkcyan;
+            font-size: 50px;
+        }
+        /*
+        input[type="checkbox"]:checked {
+            background-color: red;
+        }
+        */
+        /* checked된 체크박스 클릭시 인접형제인 span태그 배경색 바꿈 */
+        /* 많이쓰인다고함 */
+        .chkbox:checked + span{
+            background-color: red;
+            font-size: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="https://thevc.kr">안가본 사이트</a>
+    <a href="https://clien.net">안가본 사이트</a>
+    
+    <br>
+    <input type="text" value="input1" disabled><br>
+    <input type="text" value="input2"><br>
+    <input type="checkbox" class='chkbox'><span>출근</span><br>
+    <input type="checkbox" class='chkbox'><span>퇴근</span><br>
+
+    <div class="top-div">
+        <p>p1</p>
+        <p>p2</p>
+        <span>span1</span>
+        <span>span2</span>
+        
+        <div>
+            <p>p3</p>
+            <p id="vr-p">p4</p>
+            <strong>strong</strong>
+            <span>span3</span>
+        </div>
+    </div>
+    <p>p5</p>
+</body>
+</html>
