@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz3</title>
+
+    <style>
+        h1,
+        h3 {
+            color: orange;
+        }
+
+        /* 질문 1. 만약 span태그가 아래처럼 ul태그의 손자(li태그의 자식)이면
+                   ul > li > span {''} 이런 식으로 자식선택자 '>'를 사용해도 되는건가요? */
+
+        /* 질문1. CSS코드
+        div, 
+        ul > li > span {
+            color: blue;
+        }
+        */
+
+        div, 
+        span {
+            color: blue;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>제1회 봄빛 수목원 여름꽃 축제</h1>
+    <h3>수련·수국·무궁화·원추리</h3>
+
+    <div>아름다운 여름꽃과 시원한 바다를 .....</div>
+
+        <!-- 질문1. html태그
+        <ul>
+            <li>일시 : 
+                <span>6월 15일 부터 8월 15일 까지</span></li>
+
+            <li>장소 : 봄빛 수목원 일원</li>
+        </ul>
+        -->
+
+        <ul>
+            <li>일시 : <span>6월 15일 부터 8월 15일 까지</span></li>
+
+            <li>장소 : 봄빛 수목원 일원</li>
+        </ul>
+
+</body>
+</html>
