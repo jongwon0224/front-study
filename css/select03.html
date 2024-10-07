@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!--구조적 가상 클래스 선택자-->
+<style>
+    /*첫번째 자식*/
+    p:first-child {
+        color: red;
+    }
+    /*마지막 자식*/
+    p:last-child {
+        color: blue;
+    }
+    /*자식중 3번째가 p태그면 적용*/
+    /*p:nth-child(3) {
+        color: green;
+        font-size: 20px;
+    }*/
+    /*p태그 3번째 자식*/
+    p:nth-of-type(3) {
+        color: green;
+        font-size: 30px;
+    }
+    /*p자식태그의 짝수 변경 : 2n, even / 홀수는 2n + 1, odd*/
+    p:nth-of-type(even) {
+        color: black;
+        font-size: 30px;
+    }
+
+    /*div태그의 box클래스*/
+    div.box {}
+    div. box {} /*div태그의 box의 자식(스페이스 들어가있음)*/
+    div#box {} /*div태그의 id값이 box*/
+    #div.box {} /*id가 div면서 클래스가 box일때*/
+    div:hover button{} /*div에 마우스가 올라갔을때 div태그와 하위 버튼태그(스페이스들어감)
+    <div>
+        <button>    
+    </div>
+    */
+
+    div:hover > button{} /*div에 마우스가 올라갔을때 div태그와 자식인 버튼태그
+    
+</style>
+
+<body>
+
+    <div>
+        <p>p1</p>
+        <span>p2</span>
+        <p>p3</p>
+        <span>p4</span>
+        <p>p5</p>
+        <p>p6</p>
+    </div>
+
+    <div>
+        <p>p1</p>
+        <span>p2</span>
+        <span>p4</span>
+        <p>p3</p>
+        <p>p5</p>
+        <p>p6</p>
+    </div>
+
+</body>
+
+</html>
