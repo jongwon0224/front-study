@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOX MODEL</title>
+    <style>
+        .box1 {
+            margin: 30px;
+            border: 2px solid black;
+            padding: 10px;
+            width: 200px;
+            height: 100px;
+            display: inline;
+        }
+
+        .box2 {
+            margin: 50px 15px;
+            border: 2px double blue;
+            padding: 10px;
+            width: 200px;
+            height: 100px;
+            box-sizing: border-box; /* 자동조정해주기 때문에 기본적으로 box-sizing을 border-box로 설정 */
+            display: inline;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="box1">BOX1</div>
+    <div class="box2">BOX2</div>
+</body>
+
+</html>
