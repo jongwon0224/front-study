@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position</title>
+
+    <style>
+        .box {
+            width: 300px;
+            height: 200px;
+        }
+
+        .red-box {
+            background-color: rgba(255, 0, 0, 0.815);
+            position: relative;
+            left: 300px;
+            z-index: 100;
+        }
+
+        .green-box {
+            background-color: rgba(0, 128, 0, 0.849);
+            position: absolute;
+            bottom: 50px;
+            right: 50px;
+        }
+
+        .blue-box {
+            background-color: rgba(0, 0, 255, 0.829);
+            position: relative;
+            bottom: 50px;
+            left: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <!--클래스는 띄어쓰기로 구분 + 여러가지 지정가능-->
+    <div class="box red-box"></div>
+    <div class="box green-box"></div>
+    <div class="box blue-box"></div>
+
+</body>
+
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position</title>
+
+    <style>
+        /*
+        1. position : 위치 조정 (배치)
+        2. static : 기본 흐름 (기본값)
+        3. relative : 흐름대로 + 위치조정  (원래 자기가 있어야할 위치 기준)
+        4. absolute : 기본흐름 무시 + 절대좌표 기준 위치조정 (위치지정이 가능한 부모요소의 시작지점 기준
+             부모요소:static 이면 적용 x
+                     relative면 적용 가능)
+        5. fixed :  흐름무시 + 절대좌표 위치
+        6. sticky : 흐름대로 + 특정위치에 가면 fixed처럼 고정 (엑셀 틀고정 처럼), ex) top 100px;
+
+        // 위치조정 : left right top bottom z-index(앞으로 나오게함)
+        */
+
+        .box {
+            width: 300px;
+            height: 200px;            
+        }
+
+        .red-box {
+            background-color: rgba(255, 0, 0, 0.815);
+            position: relative;
+            left: 300px;
+        }
+
+        .green-box {
+            background-color: rgba(0, 128, 0, 0.849);
+            position: relative;
+            top: 95px;
+        }
+
+        .blue-box {
+            background-color: rgba(0, 0, 255, 0.829);
+            position: relative;
+            bottom: 95px;
+        }
+    </style>
+</head>
+
+<body>
+    <!--클래스는 띄어쓰기로 구분 + 여러가지 지정가능-->
+    <div class="box red-box"></div> 
+    <div class="box green-box"></div>
+    <div class="box blue-box"></div>
+
+</body>
+
+</html>
