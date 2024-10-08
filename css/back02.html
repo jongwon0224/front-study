@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>background_attachment</title>
+
+    <style>
+
+        /* body태그 : 해당 요소 넘어가면 hidden, scroll사용 (hidden은 넘어간 요소 안보이게함) */
+        /* content클래스 : 바디대그 스크롤은 웹페이지에 대한 스크롤 */
+        body {
+            height: 4000px;
+            background-image: url('../html/라면.jpg');
+            background-attachment: fixed; /* 웹배경이미지는 고정, 스크롤x*/
+        }
+
+        .content {
+            width: 500px;
+            height: 400px;
+            overflow: scroll; /* 배경이미지는 스크롤안됨*/
+            background-image: url('../html/image/explain.jpg');
+            background-attachment: scroll; /* 이미지가 같이 스크롤이됨. */
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="content">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque, quasi? Adipisci officia suscipit tenetur
+            ipsa
+            nisi ut quidem earum eum ipsum cupiditate corrupti delectus voluptas, quas, magni odio! Quas, voluptatibus.
+        </p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque, quasi? Adipisci officia suscipit tenetur
+            ipsa
+            nisi ut quidem earum eum ipsum cupiditate corrupti delectus voluptas, quas, magni odio! Quas, voluptatibus.
+        </p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque, quasi? Adipisci officia suscipit tenetur
+            ipsa
+            nisi ut quidem earum eum ipsum cupiditate corrupti delectus voluptas, quas, magni odio! Quas, voluptatibus.
+        </p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque, quasi? Adipisci officia suscipit tenetur
+            ipsa
+            nisi ut quidem earum eum ipsum cupiditate corrupti delectus voluptas, quas, magni odio! Quas, voluptatibus.
+        </p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque, quasi? Adipisci officia suscipit tenetur
+            ipsa
+            nisi ut quidem earum eum ipsum cupiditate corrupti delectus voluptas, quas, magni odio! Quas, voluptatibus.
+        </p>
+    </div>
+</body>
+
+</html>
