@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>align</title>
+
+    <style>
+        /*
+        가운데 정렬
+        1. margin 0 auto;
+            block 요소 대상 : 자신이 가운데 정렬 (좌우 margin값 자동 조절)
+            inline 요소 대상 : x
+
+        2. text-align: center;
+            block 요소 대상 : 내부 컨텐츠 요소들을 가운데 정렬
+            inline 요소 대상 : x 
+        
+        내 생각 => block요소를 가운데 정렬: margin: 0 auto;
+                => inline형태는 content로 구분: textalign: center;
+                block : <div>,<table>,<h1>~<h6>,<p>,<form>,<ul>,<ol>,<li>,<dl>,<dt>,<dd>,<pre> 등
+                inline : <span>,<a>,<br>,<em>,<strong>,<input>,<label>,<img>
+            */
+
+        p {
+            text-align: center;
+        }
+
+        .out-box {
+            width: 600px;
+            border: 1px solid black;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .inner-box {
+            width: 400px;
+            border: 1px solid red;
+            text-align: center;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <p>p 정렬</p>
+    <div class="spann">
+        <span>span 정렬</span>
+    </div>
+
+    <div class="out-box">
+        <p>p태그 outbox</p>
+        <span>span 태그 outbox</span>
+
+        <div class="inner-box">
+            <h1>h1태그 inner-box</h1>
+            <span>span태그 inner-box</span>
+        </div>
+    </div>
+</body>
+
+</html>
