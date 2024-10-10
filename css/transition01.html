@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transition</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 1000px;
+            height: 1000px;
+            margin: 0 auto;
+        }
+
+        .container::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        .box {
+            width: 10%;
+            height: 10%;
+            background-color: red;
+            float: left;
+            transition-property: background-color;
+            transition-duration: 0.03s;
+            transition-timing-function: ease-in-out;
+        }
+
+        .box1 {
+            width: 10%;
+            height: 10%;
+            background-color: red;
+            float: left;
+            transition-property: background-color;
+            transition-duration: 0.03s;
+            transition-timing-function: ease-in-out;
+        }   
+
+        .box2 {
+            width: 10%;
+            height: 10%;
+            background-color: red;
+            float: left;
+            transition-property: background-color;
+            transition-duration: 0.03s;
+            transition-timing-function: ease-in-out;
+        }
+
+        .box:hover {
+            background-color: blue;
+            width: 300px;
+        }
+
+        .box1:hover {
+            background-color: green;
+        }
+
+        .box2:hover {
+            background-color: yellow;
+            opacity: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box"></div>
+        <div class="box1"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box1"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box1"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box2"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box1"></div>
+        <div class="box"></div>
+        <div class="box1"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box1"></div>
+        <div class="box"></div>
+        <div class="box1"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box2"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box1"></div>
+        <div class="box1"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box1"></div>
+        <div class="box"></div>
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box"></div>
+        <div class="box1"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box1"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box1"></div>
+        <div class="box"></div>
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box1"></div>
+        <div class="box"></div>
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box1"></div>
+        <div class="box1"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box1"></div>
+        <div class="box"></div>
+        <div class="box2"></div>
+        <div class="box"></div>
+        <div class="box1"></div>
+        <div class="box1"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box1"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box1"></div>
+        <div class="box1"></div>
+        <div class="box"></div>
+        <div class="box2"></div>
+        <div class="box1"></div>
+        <div class="box"></div>
+        <div class="box1"></div>
+        <div class="box"></div>
+        <div class="box1"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box1"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box1"></div>
+        <div class="box"></div>
+        <div class="box1"></div>
+        <div class="box"></div>
+        <div class="box1"></div>
+        <div class="box1"></div>
+    </div>
+
+
+</body>
+
+</html>
