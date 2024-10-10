@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz05</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 500px;
+            margin: 0px auto;
+            margin-top: 50px;
+        }
+
+        .red-box {
+            width: 50%;
+            height: 100px;
+            background-color: red;
+            float: left;
+        }
+
+        .green-box {
+            width: 50%;
+            height: 100px;
+            background-color: green;
+            float: left;
+        }
+
+        .text-box {
+            width: 100%;
+            text-align: center;
+            float: left;
+        }
+
+        .blue-box {
+            width: 100%;
+            height: 200px;
+            background-color: blue;
+            float: left;
+        }
+
+        .container::after {
+            content: '';
+            display: block;
+            clear: both;
+        } 
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="red-box"></div>
+        <div class="green-box"></div>
+        <div class="text-box">글자가운데정렬</div>
+        <div class="blue-box"></div>
+    </div>
+
+</body>
+
+</html>
