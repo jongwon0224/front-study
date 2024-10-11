@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>quiz08</title>
+
+    <style>
+        * {
+            margin: 0;
+            border: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 700px;
+            border: 1px solid black;
+            color: white;
+            margin: 0 auto;
+            position: relative;
+            top: 30px;
+        }
+
+        .header {
+            background-color: white;
+            height: 100px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .header .left {
+            width: 150px;
+            background-color: red;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .header .right {
+            width: 100px;
+            background-color: red;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .section-container {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .section {
+            background-color: orange;
+            width: 490px;
+            height: 300px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .black-box1 {
+            height: 50%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .black-box2 {
+            height: 50%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .black-box {
+            background-color: black;
+            width: 100px;
+            height: 50px;
+            transition-property: all;
+            transition-duration: 1s;
+        }
+
+        .black-box:hover {
+            transform: scale(1.5);
+        }
+
+        .aside {
+            width: 210px;
+            background-color: green;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .footer {
+            background-color: blue;
+            height: 100px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="header">
+            <div class="left">메인메뉴</div>
+            <div class="right">마이페이지</div>
+        </div>
+
+        <div class="section-container">
+            <div class="section">
+                <div class="black-box1">
+                    <div class="black-box"></div>
+                    <div class="black-box"></div>
+                    <div class="black-box"></div>
+                </div>
+                <div class="black-box2">
+                    <div class="black-box"></div>
+                    <div class="black-box"></div>
+                    <div class="black-box"></div>
+                </div>
+            </div>
+            <div class="aside">aside</div>
+        </div>
+
+        <div class="footer">footer</div>
+
+    </div>
+
+</body>
+
+</html>
