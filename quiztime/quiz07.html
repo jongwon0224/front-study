@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>quiz07</title>
+
+    <style>
+        * {
+            margin: 0;
+            border: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            background-color: lightgray;
+            position: relative;
+            width: 800px;
+            margin: 0 auto;
+        }
+
+        .container::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            transition: all;
+            transition-duration: 1s;
+        }
+
+        .red-box {
+            background-color: red;
+        }
+
+        .container:hover .red-box {
+            width: 400px;
+        }
+
+        .blue-box {
+            background-color: blue;
+        }
+
+        .container:hover .blue-box {
+            background-color: purple;
+        }
+
+        .black-box {
+            background-color: black;
+            position: relative;
+            left: 0px;
+        }
+
+        .container:hover .black-box {
+            left: 200px;
+        }
+
+        .green-box {
+            background-color: green;
+            float: left;
+        }
+
+        .green-box:hover {
+            border: 20px solid red;
+        }
+
+        .orange-box {
+            background-color: orange;
+            float: left;
+        }
+
+        .orange-box:hover {
+            border: 20px solid red;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="box red-box"></div>
+        <div class="box blue-box"></div>
+        <div class="box black-box"></div>
+        <div class="box green-box"></div>
+        <div class="box orange-box"></div>
+    </div>
+</body>
+
+</html>
