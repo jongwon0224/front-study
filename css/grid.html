@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gird</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            display: grid;
+            /* 가로줄 높이(height) 조정 => 가로로 생겨서 세로로 2줄*/
+            grid-template-rows: 100px 100px;
+            /* 세로줄 (width)조정 => 세로로 한줄이여서 가로 취급*/
+            grid-template-columns: 100px 100px 100px;
+            
+            row-gap: 5px;
+            column-gap: 20px;
+        }
+
+        .item {
+            border: 1px solid black;
+        }
+
+        .row-merge {
+            grid-row:1/3;
+            /* grid-row-start: 1;
+            grid-row-end: 3; */
+        }
+
+        .col-merge {
+            grid-column: 2/4;
+            /* grid-column-start: 2;
+            grid-column-end: 4; */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="item row-merge"></div>
+        <div class="item col-merge"></div>
+        <div class="item col-merge"></div>
+        <!-- <div class="item"></div> -->
+        <!-- <div class="item"></div> -->
+        <!-- <div class="item"></div> -->
+    </div>
+    
+</body>
+</html>

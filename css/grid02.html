@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid02</title>
+
+    <style>
+        .container {
+            display: grid;
+            /* grid-template-rows: 100px 100px 100px  ==> repeat으로 대체가능 */
+            grid-template-rows: repeat(3, 100px);
+            grid-template-columns: repeat(3, 100px);
+            /* area작업 => 먼저 영역 지정 후 해당 id값에 grid-area: header;이런식으로 적용하면 자동완성 */
+            grid-template-areas: "header header header" "sidebar content content" "footer footer footer";
+        }
+
+        #header {
+            background-color: peru;
+            grid-area: header;
+        }
+
+        #sidebar {
+            background-color: green;
+            grid-area: sidebar;
+        }
+
+        #content {
+            background-color: orange;
+            grid-area: content;
+        }
+
+        #footer {
+            background-color: purple;
+            grid-area: footer;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div id="header">header</div>
+        <div id="sidebar">sidebar</div>
+        <div id="content">content</div>
+        <div id="footer">footer</div>
+    </div>
+    
+</body>
+</html>
