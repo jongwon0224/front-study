@@ -1,0 +1,32 @@
+/* 상단 nav바에 대한 스타일 */
+/* <link rel="stylesheet" href="파일주소"> */
+
+.nav {
+    height: 80px;
+    background-color: lightblue
+}
+
+.nav p {
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    border: 1px solid black;
+}
+
+.navbar {
+    height: 80px;
+    background-color: rgb(199, 121, 27);
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    border: 1px solid black;
+}
+
+.navbar li {
+    margin: 5px;
+    height: 50px;
+    width: 50px;
+    background-color: rgba(224, 155, 69, 0.726);
+}
