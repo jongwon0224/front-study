@@ -31,7 +31,7 @@
     <a href="https://naver.com">naver</a>
     <button id="move_site"></button>
 
-    <div id="box" onclick="red">instead of btn</div>
+    <div id="box" onclick="color('red')">instead of btn</div>
     <script>
 
         const naver = document.querySelector('a');
@@ -41,9 +41,9 @@
             location.href = "https://naver.com";
         }
 
-        document.getElementById('box').onclick = function () {
-            location.href = "https://reddit.com";
-        }
+        // document.getElementById('box').onclick = function () {
+        //     location.href = "https://reddit.com";
+        // }
         // const color = document.getElementById('pid');
         // const color2 = document.querySelector('#btn_green');
         // const color3 = document.querySelector('#btn_blue');
@@ -66,9 +66,9 @@
 
         function color(first) {
             var color = document.getElementById('box');
-                color.style.backgroundColor = this;
-                color.style.backgroundColor = this;
-                color.style.backgroundColor = this;
+                color.style.backgroundColor = first;
+                color.style.backgroundColor = first;
+                color.style.backgroundColor = first;
             }
 
 
