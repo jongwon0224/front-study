@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+<body>
+
+    <h1>browser02.html</h1>
+
+
+    <script>
+        alert('alert창');
+        let r1 = confirm('confirm창');
+        let r2 = prompt('id를 입력해주세요');
+
+        console.log(r1);
+        console.log(r2);
+
+        //        window.open('http://netflix.com'); // 새로운 윈도우 창 열림.. location같은느낌?
+        //        window.open('http://netflix.com', '_blank');
+
+        window.open('http://netflix.com', 'netflix', 'width=600, height=500'); // 창 넓이, 길이 조정해서 자동열림
+        window.open('popup.html', 'popup', 'width=400, height=300'); // 창 넓이, 길이 조정해서 자동열림
+
+    </script>
+</body>
+
+</html>

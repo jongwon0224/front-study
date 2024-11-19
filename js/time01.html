@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: darkgreen;
+            position: relative;
+            left: 0;
+        }
+
+        #clock {
+            width: 250px;
+            height: 100px;
+            background-color: lawngreen;
+            position: relative;
+            left: 400px;
+            top: 200px;
+            font-size: 50px;
+            font-weight: bold;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    
+    <p id="target"></p>
+    <p id="clock"></p> 
+    <div class="box"></div>
+    <button onclick="clearItv()">박스멈춰</button>
+    
+
+    <script>
+//        setTimeout(실행할코드, 시간);
+// callback을 2번사용 가능 => 콜백안에 콜백있는 함수가 더 늦게나옴.. 시간계산 잘하도록..
+        setTimeout( 
+            function() {
+                timing();
+                document.getElementById('target').textContent = '3초지났음';
+                document.getElementById('target').style.color = 'red'
+            }, 3000
+        );
+
+        // function timing () {
+        //     setTimeout(
+        //         function() {
+        //             document.write('6초 지남');
+        //         }, 3000
+        //     )
+        // }
+
+        // getElementsByClassName 할 경우 배열형태로 모든 box클래스 가져오기 때문에
+        // 마지막에 [0]처럼 인덱스번호 붙혀줘야 완전함
+        // 인터벌 함수 => 변수에 저장해도 실행은 계속됨
+        let boxMoveItv = setInterval(
+            function() {
+                const box = document.getElementsByClassName('box')[0];
+                // 600px까지 갔을경우 다시 돌아옴
+                if(box.style.left == '' || box.style.left == '600px') {
+                    box.style.left = 50 + 'px';
+                } else {
+                    let leftValue = box.style.left;
+                    leftValue = leftValue.replace('px', '');
+                    box.style.left = Number(leftValue) + 50 + 'px';
+                }
+            }, 1000
+        ) 
+
+        // 시계만들기 => 인터벌 함수 + date함수 + 시,분,초 문자열변환 + padStart사용으로 두자릿수 만들기
+        setInterval(
+            function() {
+                const current = new Date();
+                //RPAD LPAD => padStart padEnd (js)
+                const time =
+                String(current.getHours()).padStart(2, '0') + ":" + 
+                String(current.getMinutes()).padStart(2,'0') + ":" + 
+                String(current.getSeconds()).padStart(2,'0');
+
+                document.getElementById('clock').textContent = time;
+            }, 1000
+        );
+                
+        // 인터벌 멈추는 함수 => clearInterval(변수명);
+        function clearItv () {
+            clearInterval(boxMoveItv);
+        }
+            
+    </script>
+
+</body>
+</html>
