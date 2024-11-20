@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>form01</h1>
+
+    <form action="" method="">
+        ID<input type="text" id="input_id"> <br>
+        PW<input type="password" id="input_pw" placeholder="비밀번호 입력"> <br>
+        <button type="submit">제출</button>
+
+    </form>
+
+    <script>
+        console.log(document.getElementById('input_id').value);
+        console.log(document.querySelector('#input_pw').value);
+
+        const input_id = document.getElementById('input_id');
+
+        input_id.addEventListener('keydown', fuction() {console.log('keydown');});
+        input_id.addEventListener('keypress', fuction() {console.log('keypress');});
+        input_id.addEventListener('keyup', fuction() {console.log('keyup');});
+
+    </script>
+
+</body>
+</html>

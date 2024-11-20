@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .red {color: red;}
+        .blue {color: blue;}
+    </style>
+</head>
+<body>
+    
+    <p id="pid">texttexttext</p>
+
+    <a id="aid" href="https://naver.com">네이버 링크</a>
+
+    <div id="container">
+
+    </div>
+    <div id="target"></div>
+
+
+
+    <script>
+
+        // getElementById 사용안하고 classList로 css적용 가능 !!!
+        // style란에 클래스 리스트 생성
+        document.getElementById('pid').classList.add('red'); // red클래스 적용
+        document.getElementById('pid').classList.add('blue'); // blue클래스 적용
+        document.getElementById('pid').classList.remove('blue'); // blue클래스 삭제
+        document.getElementById('pid').classList.toggle('red'); // on/off처럼 됨       
+        
+        
+        const aEle = document.querySelector('#aid');
+        console.log(aEle.getAttribute('href')); // 가지고있는 속성 확인하기
+        aEle.setAttribute('href', 'https://netflix.com'); // href의 주소를 넷플릭스로 바꿈
+        aEle.setAttribute('target', '_blank'); // target을 blank로 새로운 창 만듬
+        
+        // aEle변수에 속성 적용하는 방법 3가지
+        aEle.style.color = 'red'; // 스타일로 바로 적용
+        aEle.classList.add('red'); // 클래스 리스트에 미리 만들어놓은 red 클래스 적용
+        aEle.setAttribute('class', 'red'); // setAttribute를 사용 => 클래스를 레드로바꿈
+        
+        // aEle변수 속성 제거하기
+        aEle.removeAttribute('target'); // target이라는 속성을 제거함
+
+        
+        const divCon = document.getElementById('container');
+
+        const newEle = document.createElement('p'); // p태그만듬
+        const txtEle = document.createTextNode('P태그안에 text'); // 택스트 만듬
+        const attEle = document.createAttribute('class'); // class속성만듬
+        attEle.value = 'blue'; // class속성값이 blue
+
+        divCon.appendChild(newEle); // div에 p태그 추가
+        newEle.appendChild(txtEle); // p태그 내부에 텍스트 노드인 txtEle 추가
+        newEle.setAttributeNode(attEle); //p태그에 class속성 + 값이 blue인 노드추가
+
+        
+        document.getElementById('target').innerHTML = '<strong>p target text</strong>';
+
+//        target에 있는 strong속성을 삭제하는 방법 3가지
+        document.getElementById('target').removeChild(document.querySelector('strong'));
+        // document.getElementById('target').removeChild(document.getElementById('target').firstChild);
+        // document.querySelector('strong').parentNode.removeChild(document.querySelector('strong'));
+    </script>
+
+</body>
+</html>

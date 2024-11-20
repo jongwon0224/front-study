@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js"></script>
+</head>
+
+<body>
+
+    <canvas id="myChart" width="300" height="100"></canvas>
+
+    <script>
+        let myCt = document.getElementById('myChart');
+
+        let myChart = new Chart(myCt, {
+            type: 'line',
+            data: {
+                labels: [ '2024-11-16','2024-11-17','2024-11-18', '2024-11-19', '2024-11-20', '2024-11-21' ],
+                datasets: [
+                    {
+                        label: 'Weight Change',
+                        fill: false,
+                        data: [ 79.5, 79.9, 80, 85.5, 86.6, 90 ],
+                        backgroundColor: '#00C7E2'
+                    }
+                ]
+            },
+        });
+
+        
+    </script>
+
+</body>
+
+</html>
