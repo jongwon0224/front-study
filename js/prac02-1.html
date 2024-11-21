@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form id="frm_main">
+        <input type="text" id="loginId" placeholder="아이디"><br>
+        <input type="password" id="loginPw" placeholder="비밀번호"><br>
+        <button id="btnLogin" type="submit" onclick="tryLogin()">로그인 시도</button><br>
+    </form>
+    <script>
+        //코드작성
+
+        const btn_loginId = document.getElementById('loginId');
+        const btn_loginPw = document.getElementById('loginPw');
+        const btn_login = document.getElementById('btnLogin');
+        const frm_main = document.getElementById('frm_main');
+
+
+        btn_loginId.addEventListener('keydown', function (event) {
+            if (event.keyCode === 13) {
+                event.preventDefault();
+                btn_loginPw.focus();
+            }
+        })
+
+        btn_loginPw.addEventListener('keydown', function (event) {
+            if (event.keyCode === 13) {
+                event.preventDefault();
+                btn_login.click();
+            }
+        })
+
+        function tryLogin() {
+            event.preventDefault();
+            btn_loginId.value = null;
+            btn_loginPw.value = null;
+        }
+
+        frm_main.addEventListener('submit', (event) => {
+            event.preventDefault();
+            
+            if(btn_loginId.value === null) {
+                alert('아이디를 입력해주세요');
+                btn_loginId.focus();
+                return;
+            }
+
+            if(btn_loginPw.value === null) {
+                alert('비밀번호를 입력해주세요');
+                btn_loginPw.focus();
+                return;
+            }
+
+            tryLogin();
+        })
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <input type="text" id="loginId" placeholder="아이디"><br>
+    <input type="password" id="loginPw" placeholder="비밀번호"><br>
+    <button id="btnLogin" onclick="tryLogin()">로그인 시도</button><br>
+
+    <script>
+        //코드작성
+
+        const btn_loginId = document.getElementById('loginId');
+        const btn_loginPw = document.getElementById('loginPw');
+        const btn_login = document.getElementById('btnLogin');
+
+        function tryLogin() {
+            btn_loginId.value = null;
+            btn_loginPw.value = null;
+        }
+
+
+        // *아이디 입력칸에서 키보드 입력 시,
+        // 무슨 키가 눌렸는지 확인 해보고 엔터가 눌리면 비밀번호 입력 칸으로 이동
+
+        btn_loginId.addEventListener('keydown', function (event) {
+            //console.log(event.keyCode);
+            if (event.keyCode === 13) {
+                btn_loginPw.focus();
+            }
+        })
+
+        // *비밀번호 입력칸에서 키보드 입력 시,
+        // 엔터가 눌리면 로그인 버튼을 누른것과 동일한 기능을 수행
+
+        btn_loginPw.addEventListener('keydown', function (event) {
+            if (event.keyCode === 13) {
+                tryLogin();
+                //btn_login.click();
+            }
+        })
+
+    </script>
+</body>
+
+</html>

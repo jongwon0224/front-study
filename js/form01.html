@@ -21,9 +21,15 @@
 
         const input_id = document.getElementById('input_id');
 
-        input_id.addEventListener('keydown', fuction() {console.log('keydown');});
-        input_id.addEventListener('keypress', fuction() {console.log('keypress');});
-        input_id.addEventListener('keyup', fuction() {console.log('keyup');});
+        input_id.addEventListener('keydown', () => {
+            console.log('keydown');
+        });
+        input_id.addEventListener('keypress', () => {
+            console.log('keypress');
+        });
+        input_id.addEventListener('keyup', () => {
+            console.log('keyup');
+        });
 
     </script>
 

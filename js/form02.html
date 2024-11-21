@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+
+</head>
+
+<body>
+
+    <form action="" method="" id="frm_main">
+
+        ID<input type="text" id="input_id" value="myid"> <br>
+        PW<input type="password" id="input_pw" placeholder="비밀번호 입력"> <br><br>
+        <button id="btn_btn" type="button">단순버튼</button>
+        <button id="btn_submit" type="submit">제출(submit 역할)</button>
+        
+        <br><br>
+
+        치즈<input type="checkbox" id="chb_cs" class="chb_option">
+        크림<input type="checkbox" id="chb_cr" class="chb_option">
+        시럽<input type="checkbox" id="chb_sr" class="chb_option">
+        <button type="button" id="chb_all">모든 옵션 선택</button>
+        
+        <br><br>
+
+        <!-- name을 넣어주면 라디오방스 중복체크 불가 -->
+        대<input type="radio" id="rd_l" name="size" value="large">
+        중<input type="radio" id="rd_m" name="size" value="medium">
+
+        <br><br>
+
+        <select id="selectType">
+            <!-- select박스는 value호출시 selected가 지정된 value값만 호출됨 -->
+            <option value="eat">매장</option>
+            <option value="togo" selected>포장</option>
+            <option value="deli">배달</option>
+        </select>
+
+    </form>
+
+    <script>
+        // btn_btn 단순버튼 클릭시 셀렉트박스로 포커스 가게함 !
+        document.getElementById('btn_btn').addEventListener('click', ()=> {
+            document.getElementById('selectType').focus();
+        })
+
+        // 셀렉트박스 셀렉트되어있는 옵션 찾는 방법 => for of 문 + option.value로 찾음
+        console.log(document.getElementById('selectType').value);
+        const seleType_options = document.querySelectorAll('#selectType > option');
+        
+        for(let option of seleType_options) {
+            console.log(option.value+' '+option.selected);  
+        }
+        // 위에 for of문 풀어쓴 것...
+        // for(let i=0; i<seleType_options.length; i++) {
+        //     console.log(seleType_options[i].selected);
+        // }
+
+        // input_pw 값 대입
+        console.log(document.getElementById('input_id').value); 
+        document.getElementById('input_pw').value = 'abcde';
+
+        // 체크박스 cs true => 체크로 변경
+        console.log(document.getElementById('chb_cs').checked);
+        document.getElementById('chb_cr').checked = true;
+
+        // 라디오 버튼 true => 체크표시
+        console.log(document.getElementById('rd_l').checked);
+        document.getElementById('rd_m').checked = true;
+        document.getElementById('rd_l').checked = true;
+
+        // 모든 옵션 체크 한번에 체크로 표시
+        document.getElementById('chb_all').onclick = function() {
+
+            let chbArr = document.getElementsByClassName('chb_option');
+            for(let i=0; i< chbArr.length; i++) {
+                chbArr[i].checked = true;
+                // chbArr[i].checked = !chbArr[i].checked;
+            }
+            // document.getElementById('chb_cs').checked = true;
+            // document.getElementById('chb_cr').checked = true;
+            // document.getElementById('chb_sr').checked = true;
+        }
+
+        //시나리오
+        // 제출 버튼 누를때, 만약 체크박스 옵션이 한개도 선택되어있지 않으면?
+        // 옵션1개는 필수입니다! 경고창 표시
+        
+        // const btn_submit = document.getElementById('btn_submit');
+        // const chb_cs = document.getElementById('chb_cs');
+        // const chb_cr = document.getElementById('chb_cr');
+        // const chb_sr = document.getElementById('chb_sr');
+        
+        document.getElementById('frm_main').addEventListener('submit', function (event) {
+            event.preventDefault(); // 기본내장값 없애버림 ex.submit이면 자동 제출 안되게 만듬
+            const chbArr = document.getElementsByClassName('chb_option');
+
+            let count = 0;
+            for(let i=0; i<chbArr.length; i++) {
+                if(chbArr[i].checked === true) {
+                    count++;
+                }
+            }
+
+            if(count == 0) {
+                alert('옵션1개는 필수입니다.')
+            }
+            
+            // if(chb_cs.checked === false && chb_cr.checked === false && chb_sr.checked === false) {
+            //     alert('옵션1개는 필수입니다.');
+            // }
+        });
+
+        
+
+
+
+        
+
+    </script>
+
+</body>
+
+</html>

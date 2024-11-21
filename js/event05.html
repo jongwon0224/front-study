@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+        }
+
+        .bg-red {
+            background-color: red;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="box" id="box1"></div>
+    <div class="box" id="box2"></div>
+    <div class="box" id="box3"></div>
+    <div class="box" id="box3"></div>
+    <div class="box" id="box3"></div>
+    <div class="box" id="box3"></div>
+    <div class="box" id="box3"></div>
+
+<script>
+    
+    // class명 동일하게 하면 아래처럼 배열 만들 필요없이 하나의 변수에 배열처럼 담을 수 있음.
+    const boxArr = document.querySelectorAll('.box');
+    // boxArr = [box1, box2, box3]
+//    console.log(boxArr);
+
+
+    // addEventListener 활용 => 매개변수에 event값 입력시 this로 안됨
+    // => this.classlist 말고 event.target으로 해야 지정됨
+
+    boxArr.forEach((item, index) => {
+        item.addEventListener('click', (event) => {
+//            console.log(event);
+            event.target.classList.toggle('bg-red');
+        })
+    }) 
+
+    // function에서 this키워드 활용
+    // boxArr.forEach((item) => {
+    //     item.addEventListener('click', function () {
+    //         console.log(this);
+    //         this.classList.toggle('bg-red');
+    //     })
+    // })
+    
+    
+    // for문으로 배열의 인덱스별로 적용
+    //     for(let i = 0; i < boxArr.length; i++) {
+// //        boxArr[i].onclick = function () {};
+//         boxArr[i].addEventListener('click', ()=> {
+//             boxArr[i].classList.toggle('bg-red');
+//         });
+//     }
+
+
+    // 내가 누른 박스의 배경색상이 빨간색으로 바뀌어라
+    // 개별적으로 선택해서 적용
+    // const box1 = document.getElementById('box1');
+    // const box2 = document.getElementById('box2');
+    // const box3 = document.getElementById('box3');
+    
+    // box1.addEventListener('click', ()=> {
+    //     box1.classList.toggle('bg-red');
+    // });
+
+    // box2.addEventListener('click', ()=> {
+    //     box2.classList.toggle('bg-red');
+    // });
+
+    // box3.addEventListener('click', ()=> {
+    //     box3.classList.toggle('bg-red');
+    // });
+
+</script>
+
+</body>
+</html>

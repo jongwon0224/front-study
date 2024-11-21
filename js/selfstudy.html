@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <div id="main">
+            <p id="p1">p1 텍스트</p>
+            <p id="p2">p2 텍스트</p>
+        </div>
+    </div>
+    <button onclick="changeMain('main')">main 배경색 gray로 변경</button>
+
+    <script>
+        const cg_style = {
+            ch_bgColor: function (id, color) {
+                document.getElementById(id).style.backgroundColor = color;
+            }
+        }
+
+        function changeMain(id) {
+            console.log(id);
+            cg_style.ch_bgColor(id, 'gray');
+        }
+        
+
+    </script>
+</body>
+
+</html>
