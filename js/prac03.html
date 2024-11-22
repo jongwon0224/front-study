@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #dal {
+            font-size: 30px;
+            /* display: inline; */
+        }
+
+        #getNum {
+            font-size: 30px;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <span id="dal">
+        달식당 좋아요 ♥
+    </span>
+    <span id="getNum"></span>
+
+</body>
+
+<script>
+    
+    const dal = document.getElementById('dal');
+    const getNum = document.getElementById('getNum');
+    let num = 0;
+
+    dal.addEventListener('click', function() {
+        num++;
+        getNum.textContent = num;
+    });
+</script>
+</html>

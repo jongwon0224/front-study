@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+        #box {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="box"></div>
+
+
+    <script>
+        /* 코딩 부분 */
+/*
+        const box = document.getElementById('box');
+
+        function handleEvent() {
+            if (box.event.type === 'mouseover') {
+                console.log('마우스올라옴');
+            } else if (box.event.type === 'click') {
+                console.log('클릭됨');
+            }
+        }
+
+        box.addEventListener('mouseover', handleEvent);
+        box.addEventListener('click', handleEvent);
+*/
+
+        const eventHandlers = {
+            mouseover: () => console.log('마우스 올라옴'),
+            click: () => console.log('클릭됨'),
+        };
+
+        function handleEvent(event) {
+            const handler = eventHandlers[ event.type ];
+            if (handler) handler();
+        }
+
+        box.addEventListener('mouseover', handleEvent);
+        box.addEventListener('click', handleEvent);
+
+    </script>
+</body>
+
+</html>
